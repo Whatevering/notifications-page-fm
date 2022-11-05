@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+$Red: hsl(1, 90%, 64%);
+$Blue: hsl(219, 85%, 26%);
+$White: hsl(0, 0%, 100%);
+$VeryLightGrayishBlue: hsl(210, 60%, 98%);
+$LightGrayishBlue1: hsl(211, 68%, 94%);
+$LightGrayishBlue2: hsl(205, 33%, 90%);
+$GrayishBlue: hsl(219, 14%, 63%);
+$DarkGrayishBlue: hsl(219, 12%, 42%);
+$VeryDarkBlue: hsl(224, 21%, 14%);
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $VeryDarkBlue;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $VeryLightGrayishBlue;
+}
+
+.container {
+  max-height: calc(100vh - 2rem);
+  max-width: 800px;
+  padding: 2rem;
+  background: $White;
+  border-radius: 1rem;
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+
+  .title {
+    display: flex;
+    align-items: center;
+
+    span {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: $VeryDarkBlue;
+      margin-right: 0.5rem;
+    }
+
+    .num {
+      padding: 4px 8px;
+      background: $Blue;
+      color: white;
+      font-weight: 500;
+      border-radius: 6px;
+      font-size: 1rem;
+      line-height: 100%;
+    }
+  }
+
+  a {
+    font-weight: 500;
+    color: $DarkGrayishBlue;
+  }
+}
+
+.item {
+  display: flex;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+
+  img {
+    width: 40px;
+    height: 40px;
+    margin-right: 0.7rem;
+  }
+
+  .content {
+    .title {
+      font-size: 1rem;
+      display: block;
+      color: $DarkGrayishBlue;
+
+      .who {
+        font-weight: 800;
+        margin-right: 4px;
+        color: $VeryDarkBlue;
+      }
+
+      .high-light-1 {
+        color: $DarkGrayishBlue;
+        font-weight: 700;
+        margin-left: 4px;
+      }
+
+      .high-light-2 {
+        color: $Blue;
+        font-weight: 800;
+        margin-left: 4px;
+      }
+    }
+
+    .time {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: $GrayishBlue;
+      margin-bottom: 2px;
+    }
+
+    .message {
+      display: block;
+      padding: 1rem;
+      border-radius: 4px;
+      border: 1px solid $LightGrayishBlue2;
+      color: $DarkGrayishBlue;
+      margin-top: 12px;
+    }
+  }
+
+  &.new {
+    background-color: $VeryLightGrayishBlue;
+    border-radius: 0.5rem;
+
+    .content .title::after {
+      content: "";
+      display: inline-block;
+      border-radius: 50px;
+      width: 8px;
+      height: 8px;
+      background: $Red;
+      margin-left: 6px;
+      margin-bottom: 2px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    align-items: flex-start;
+  }
+
+  .container {
+    min-height: 100%;
+    max-height: 100%;
+    border-radius: 0;
+    padding: 4%;
+  }
+}

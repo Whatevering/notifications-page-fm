@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: hsl(224deg, 21%, 14%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(210deg, 60%, 98%);
+}
+
+.container {
+  max-height: calc(100vh - 2rem);
+  max-width: 800px;
+  padding: 2rem;
+  background: hsl(0deg, 0%, 100%);
+  border-radius: 1rem;
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.header .title {
+  display: flex;
+  align-items: center;
+}
+.header .title span {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: hsl(224deg, 21%, 14%);
+  margin-right: 0.5rem;
+}
+.header .title .num {
+  padding: 4px 8px;
+  background: hsl(219deg, 85%, 26%);
+  color: white;
+  font-weight: 500;
+  border-radius: 6px;
+  font-size: 1rem;
+  line-height: 100%;
+}
+.header a {
+  font-weight: 500;
+  color: hsl(219deg, 12%, 42%);
+}
+
+.item {
+  display: flex;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+.item img {
+  width: 40px;
+  height: 40px;
+  margin-right: 0.7rem;
+}
+.item .content .title {
+  font-size: 1rem;
+  display: block;
+  color: hsl(219deg, 12%, 42%);
+}
+.item .content .title .who {
+  font-weight: 800;
+  margin-right: 4px;
+  color: hsl(224deg, 21%, 14%);
+}
+.item .content .title .high-light-1 {
+  color: hsl(219deg, 12%, 42%);
+  font-weight: 700;
+  margin-left: 4px;
+}
+.item .content .title .high-light-2 {
+  color: hsl(219deg, 85%, 26%);
+  font-weight: 800;
+  margin-left: 4px;
+}
+.item .content .time {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: hsl(219deg, 14%, 63%);
+  margin-bottom: 2px;
+}
+.item .content .message {
+  display: block;
+  padding: 1rem;
+  border-radius: 4px;
+  border: 1px solid hsl(205deg, 33%, 90%);
+  color: hsl(219deg, 12%, 42%);
+  margin-top: 12px;
+}
+.item.new {
+  background-color: hsl(210deg, 60%, 98%);
+  border-radius: 0.5rem;
+}
+.item.new .content .title::after {
+  content: "";
+  display: inline-block;
+  border-radius: 50px;
+  width: 8px;
+  height: 8px;
+  background: hsl(1deg, 90%, 64%);
+  margin-left: 6px;
+  margin-bottom: 2px;
+}
+
+@media (max-width: 800px) {
+  body {
+    align-items: flex-start;
+  }
+  .container {
+    min-height: 100%;
+    max-height: 100%;
+    border-radius: 0;
+    padding: 4%;
+  }
+}/*# sourceMappingURL=style.css.map */
