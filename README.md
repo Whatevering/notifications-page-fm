@@ -1,6 +1,6 @@
 # Demo
 
-![](https://notifications-page-fm.vercel.app/)
+https://notifications-page-fm.vercel.app/
 
 # Frontend Mentor - Notifications page
 
